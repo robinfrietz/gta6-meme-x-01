@@ -19,13 +19,15 @@ floating by, phone in hand, chart going up.
   make.fun press kit, used as-is on a light ground, with the required clear
   space; the name is written lowercase `make.fun`.
 - `meme-base.png` — the raw AI base art before text/branding was added.
-- `POST.json` — the address of the X post carrying the meme. **Placeholder
-  for now:** the post goes up after this repo is made, so the status id is
-  `POST_ID_BELUM_ADA` until the post exists — replace it with the real post
-  URL before submitting.
+- `POST.json` — the address of the X post carrying the meme: the live post
+  https://x.com/0xfri3tz/status/2123508767786758261 (posted 20 Nov 2026
+  03:08 WIB from @0xfri3tz).
 - `CAPTION.md` — the exact caption for the X post (play code included).
 - `main.ts` — the entry program (Node 22, standard library only): copies
-  `POST.json` to `/output`, where the grader reads it. Run: `node main.ts`.
+  `POST.json` **and `meme.png`** to `/output`, where the grader reads them.
+  It resolves inputs relative to its own directory (so it works from any
+  working directory) and only accepts a real post URL of the form
+  `https://x.com/<handle>/status/<digits>`. Run: `node main.ts`.
 
 ## How to post (for the human)
 
